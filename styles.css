@@ -1,0 +1,340 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #333;
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+html {
+  overflow-x: hidden; /* Ensure no overflow on mobile */
+}
+
+/* Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #0057B7;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure content is vertically centered */
+  padding: 15px 20px; /* Add more vertical padding to increase space */
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #0057B7;
+}
+
+/* Header Content */
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Distribute space between logo, title, and share buttons */
+  align-items: center;
+  width: 100%; /* Ensure header content spans full width */
+}
+
+.logo {
+  max-width: 120px; /* Decreased size to make it proportional */
+  height: auto;
+  margin-right: 20px; /* Space between logo and text */
+}
+
+h1 {
+  font-size: 36px; /* Adjust text size for better centering */
+  color: white;
+  flex-grow: 1; /* Allow the title to take up available space */
+  text-align: center; /* Center the text */
+}
+
+/* Share container styling */
+.share-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Ensure alignment to the right */
+  gap: 15px; /* Add space between the icons */
+  padding-right: 30px; /* Add space between share buttons and the right edge */
+}
+
+.share-label {
+  font-size: 18px;
+  color: #FFD700;
+  font-weight: bold;
+}
+
+/* Share buttons styling */
+.share-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.share-logo {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.share-logo:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Intro Section */
+.intro-section {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.intro-content h1 {
+  font-size: 70px;
+  color: #0057B7;
+  margin-bottom: 20px;
+}
+
+.intro-content p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.intro-content button {
+  background-color: #FFD700;
+  color: #0057B7;
+  border: none;
+  padding: 20px 60px;
+  font-size: 26px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.intro-content button:hover {
+  background-color: #0057B7;
+  color: #FFD700;
+}
+
+/* Form Section (Wider and takes up more room) */
+.form-section {
+  background-color: white;
+  padding: 40px;
+  margin: 50px auto;
+  width: 95%;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+input, select, button {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #0057B7;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+/* Adjust spacing and font size for form labels and inputs */
+#mpSection, #nameSection {
+  margin-bottom: 20px;
+}
+
+#mpLabel, #nameLabel {
+  font-size: 20px;
+}
+
+#mpSelect, #userName {
+  font-size: 20px;
+  padding: 10px;
+}
+
+/* Remove blue background for autofilled fields in Chrome */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #333 !important;
+}
+
+button {
+  background-color: #0057B7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:disabled {
+  background-color: #aaa;
+}
+
+button:hover {
+  background-color: #FFD700;
+  color: #0057B7;
+}
+
+/* Email Preview Styling */
+#emailPreview {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Hidden textarea for copying email content */
+#copyEmailContent {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  resize: none;
+}
+
+/* Fix the text inside the white box */
+.intro-content,
+#formSection {
+  filter: none;
+  opacity: 1;
+}
+
+/* MEDIA QUERIES FOR MOBILE OPTIMIZATION */
+@media only screen and (max-width: 768px) {
+  /* Adjust header */
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    max-width: 80px;
+  }
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+    margin: 0 10px;
+  }
+
+  .share-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Intro section adjustments */
+  .intro-content h1 {
+    font-size: 48px;
+  }
+
+  .intro-content p {
+    font-size: 18px;
+  }
+
+  .intro-content button {
+    padding: 14px 40px;
+    font-size: 20px;
+  }
+
+  /* Form section adjustments */
+  .form-section {
+    padding: 30px;
+    margin: 20px auto;
+  }
+
+  input, select, button {
+    width: 100%;
+  }
+}
+
+/* Smaller screens like phones */
+@media only screen and (max-width: 480px) {
+  /* Adjust header */
+  .logo {
+    max-width: 80px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .share-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Intro content */
+  .intro-content h1 {
+    font-size: 36px;
+  }
+
+  .intro-content p {
+    font-size: 16px;
+  }
+
+  .intro-content button {
+    padding: 12px 30px;
+    font-size: 18px;
+  }
+
+  /* Form section */
+  .form-section {
+    padding: 20px;
+    margin: 10px auto;
+  }
+
+  /* Form inputs */
+  input, select, button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  /* Smaller text sizes for form labels */
+  #mpLabel, #nameLabel {
+    font-size: 18px;
+  }
+
+  /* Ensure form sections fit within mobile screen */
+  input, select, button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Ensure share buttons don’t sit too close to screen edges */
+  .share-container {
+    margin-right: 15px;
+  }
+}
+
+/* MEDIA QUERIES FOR LAPTOPS */
+@media only screen and (min-width: 1024px) {
+  /* Further increase font and button size on larger screens like laptops */
+  .intro-content h1 {
+    font-size: 80px;
+  }
+
+  .intro-content p {
+    font-size: 28px;
+  }
+
+  .intro-content button {
+    padding: 24px 70px;
+    font-size: 28px;
+  }
+}
