@@ -255,7 +255,10 @@ button:hover {
   /* Form section adjustments */
   .form-section {
     padding: 30px;
-    margin: 20px auto;
+    margin: 20px auto; /* Centered form with auto margin */
+    width: 90%; /* Adjust width to ensure form is balanced */
+    max-width: 100%; /* Ensure it does not overflow */
+    box-sizing: border-box; /* Include padding in width calculations */
   }
 
   input, select, button {
@@ -306,19 +309,19 @@ button:hover {
 
   /* Form section */
   .form-section {
-    padding: 20px;
-    margin: 10px auto;
+    padding: 20px; /* Padding on all sides */
+    margin: 10px auto; /* Center form with auto margins */
+    width: 90%; /* Ensure even spacing on both sides */
+    max-width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in width */
   }
 
   /* Form inputs */
   input, select, button {
     font-size: 16px;
     padding: 10px;
-  }
-
-  /* Smaller text sizes for form labels */
-  #mpLabel, #nameLabel {
-    font-size: 18px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   /* Ensure form sections fit within mobile screen */
@@ -344,3 +347,4 @@ button:hover {
     font-size: 28px;
   }
 }
+
