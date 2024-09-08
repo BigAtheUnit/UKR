@@ -266,31 +266,42 @@ button:hover {
 /* Smaller screens like phones */
 @media only screen and (max-width: 480px) {
   /* Adjust header */
+  .header-content {
+    padding: 5px 10px; /* Reduced padding */
+  }
+
   .logo {
-    max-width: 80px;
+    max-width: 60px;
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 22px; /* Smaller font for mobile */
+  }
+
+  .share-container {
+    padding-right: 10px; /* Reduce right padding */
+    margin-right: 10px; /* Margin to ensure the logos don’t overflow */
+    display: flex;
+    flex-wrap: wrap; /* Ensures icons wrap if they exceed available space */
   }
 
   .share-logo {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px; /* Smaller social icons for mobile */
   }
 
   /* Intro content */
   .intro-content h1 {
-    font-size: 36px;
+    font-size: 28px; /* Reduce font size */
   }
 
   .intro-content p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .intro-content button {
-    padding: 12px 30px;
-    font-size: 18px;
+    padding: 10px 20px; /* Smaller padding for mobile */
+    font-size: 16px;
   }
 
   /* Form section */
@@ -314,11 +325,6 @@ button:hover {
   input, select, button {
     width: 100%;
     box-sizing: border-box;
-  }
-
-  /* Ensure share buttons don’t sit too close to screen edges */
-  .share-container {
-    margin-right: 15px;
   }
 }
 
